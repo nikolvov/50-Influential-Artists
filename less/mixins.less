@@ -1,10 +1,36 @@
-.custom-btn(){
-    width: 20%;
+.custom-btn(@bg-color, @font-color){
+    width: 10%;
     border-radius: 15px;
     height: 35px;
     font-size: 1.3rem;
+    border: 1px solid red;
+    background-color: @bg-color;
+    color: @font-color;
+    display:flex;
+    align-items: center;
+    justify-content:  center;
+};
+
+.custom-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+.custom-layout2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
+
+.align-center{
+    display:flex;
+    align-items: center;
 }
 
-.custom-layout(@justify, @align){
-	display: flex;
-}
+.custom-layout3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+};

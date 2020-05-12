@@ -1,3 +1,23 @@
+.custom-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-layout2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.custom-layout3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 html,
 body,
 div,
@@ -87,17 +107,21 @@ video {
   vertical-align: baseline;
 }
 nav {
-  font-size: 30px;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
   padding-top: 5%;
   padding-bottom: 5%;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  nav {
+    font-size: 2rem;
+  }
+}
 .title-img-container {
   position: relative;
   text-align: center;
-  color: white;
   padding-bottom: 5%;
 }
 .centered {
@@ -105,13 +129,103 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 4rem;
   color: white;
-  width: 25%;
+  width: 30%;
 }
-.below-btn {
+@media (max-width: 800px) {
+  .centered {
+    font-size: 60px;
+    width: 50%;
+    top: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .centered {
+    font-size: 30px;
+    width: 40%;
+    top: 40%;
+  }
+}
+div.below-btn {
   position: absolute;
   bottom: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 10%;
+  border-radius: 15px;
+  height: 35px;
+  font-size: 1.3rem;
+  border: 1px solid red;
+  background-color: #FFBF27;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  div.below-btn {
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  div.below-btn {
+    bottom: 20%;
+    width: 100px;
+  }
+}
+section.artists-container {
+  display: flex;
+}
+@media (max-width: 500px) {
+  section.artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+div.artist {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  div.artist {
+    display: flex;
+    flex-direction: column;
+  }
+}
+div.artist img {
+  width: 350px;
+  height: 300px;
+  border-radius: 0.25rem;
+  margin: 4%;
+}
+@media (max-width: 500px) {
+  div.artist img {
+    width: 250px;
+    height: 200px;
+  }
+}
+div.bio {
+  width: 40vw;
+  font-size: 18px;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+}
+a {
+  font-size: 22px;
+  color: #FFBF27;
+  padding-bottom: 3%;
+}
+img:hover {
+  opacity: 80%;
+}
+@media (max-width: 500px) {
+  body {
+    max-width: 500px;
+  }
 }
