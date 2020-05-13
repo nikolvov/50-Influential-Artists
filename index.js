@@ -212,7 +212,8 @@ console.log(artists[0].name);
 console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
+artists[8].name = 'Vincent Van Gogh';
+console.log(artists[8].name);
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -240,20 +241,32 @@ function getArtistByIndex(id) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+// function removeArtist(artists, id) {
+//   artists.pop
   
-  /**
+//   /**
+
+function removeArtist(array, index) { 
+    let a = index;
+    artists.splice(a, 1);
+    return artists;
+};
+console.log(removeArtist(artists, 19));
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
-  }
+function lotsOfArt(array){
+    let cart = [];
+    for (let index in artists){
+      let numberOfPaintings = (artists[index]); 
+      if ((numberOfPaintings.paintings) > 100){
+        cart.push(numberOfPaintings.name);
+      };
+    };
+    return cart;
+  };
+console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -265,11 +278,11 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
+function addArtist(array){
+  artists.push(array);
+  return artists;
+  };
+console.log(addArtist([{id: 20, name: 'Niko Lvov', years: '1994 - Present', genre: 'Wed Dev', nationality: 'Russian-American', bio: 'Hello World!'}]));
 
 
 
